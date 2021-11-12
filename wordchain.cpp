@@ -62,6 +62,7 @@ public:
 		}
 		else
 		{
+			cout<<"wordchain start"<<endl;
 			node* pCurr = pHead;
 			cout << pCurr->getData() << "->";
 			while(pCurr->getNext() != NULL)
@@ -70,6 +71,7 @@ public:
 				cout<<pCrr->getData()<<"->";
 			}
 		}
+		cout <<"wordchain end"<<endl;
 		cout << endl;
 	}
 	bool findoverlap(char *word)  //function findoverlap
