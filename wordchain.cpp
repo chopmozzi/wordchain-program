@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 
-class node
+class node //node class
 {
 prviate:
-	char data[10];
-	node* pNext;
+	char data[20]; //word data
+	node* pNext;   //next node
 public:
 	node()
 	{
@@ -30,18 +30,18 @@ public:
 	}
 };
 
-class list
+class list   //list class
 {
 private:
-	node* pHead;
-	node* pTail;
+	node* pHead;   //Head node
+	node* pTail;   //Tail node
 public:
 	list()
 	{
 		pHead = nullptr;
 		pTail = nullptr;
 	}
-	void Insert(char* word)
+	void Insert(char* word) //function Insert
 	{
 		node* pNew = new node;
 		pNew->SetData(word);
@@ -54,7 +54,7 @@ public:
 			pTail->SetNext(pNew);
 		pTail = pNew;
 	}
-	void Print()
+	void Print()   //function print
 	{
 		if(pHead == nullptr)
 		{
@@ -72,7 +72,7 @@ public:
 		}
 		cout << endl;
 	}
-	bool findoverlap(char *word)
+	bool findoverlap(char *word)  //function findoverlap
 	{
 		node* ptr = pHead;
 		bool isFind = false;
@@ -87,7 +87,7 @@ public:
 			ptr = ptr->getNext();
 		}
 	}
-	bool wordchain(char* word)
+	bool wordchain(char* word)   //function wordchain
 	{
 		char str1[20];
 		char str2[20];
@@ -101,7 +101,7 @@ public:
 		else
 			return false;
 	}
-	void deletelist()
+	void deletelist()         //function deletelist
 	{
 		node* ptr = pHead;
 		while(ptr != nullptr)
@@ -114,7 +114,7 @@ public:
 	}
 };
 
-int main(void)
+int main(void)   //function main
 {
 	list wordL;
 	int index = 0;
