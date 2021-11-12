@@ -82,7 +82,7 @@ public:
 		while(ptr != NULL)
 		{
 			index++;
-			if(strcmp(ptr->getData(), word) ==0)
+			if(strcasecmp(ptr->getData(), word) ==0)
 			{
 				return true;
 			}
