@@ -128,6 +128,7 @@ int main(void)   //function main
 		if(strcmp(str, "exit") ==0)
 		{
 			wordL.deletelist();
+			cout<<"EXIT"<<endl;
 			return 0;
 		}
 		if(index == 0)
