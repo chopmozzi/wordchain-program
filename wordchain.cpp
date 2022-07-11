@@ -73,6 +73,7 @@ public:
 		}
 		cout <<"wordchain end"<<endl;
 		cout << endl;
+		int chop=0;
 	}
 	bool findoverlap(char *word)  //function findoverlap
 	{
